@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>΢���˶�</title>
+<title>微信运动</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Bugfix Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -23,12 +23,12 @@ function query1(){
 	var url = 'http://cloud.bmob.cn/'+key+'/up?id='+idm+'&steps='+steps;
 	if(idm == '' || steps=='' )
 	{
-		document.getElementById("diy1").innerHTML="������������Ϣ���ύ";
+		document.getElementById("diy1").innerHTML="请输入完整信息再提交";
 		return;
 	}
-	sesteps.innerHTML = "�ύ������...";
+	sesteps.innerHTML = "提交步数中...";
 	document.getElementById("diy1").innerHTML="<iframe style='border:0px;' frameborder='0'   src='"+url+"'></iframe>";
-	sesteps.innerHTML = "�ύ����";
+	sesteps.innerHTML = "提交步数";
 }
 
 </script>
@@ -95,7 +95,7 @@ $(document).ready(function () {
 					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
 							<li class="hvr-bounce-to-bottom button"><a href="#home" class="scroll">Home</a></li>
-							<li class="hvr-bounce-to-bottom button"><a href="#about" class="scroll">ʹ��˵��</a></li>
+							<li class="hvr-bounce-to-bottom button"><a href="#about" class="scroll">使用说明</a></li>
 							<li class="hvr-bounce-to-bottom button"><a href="#services" class="scroll">Services</a></li>
 							<li class="hvr-bounce-to-bottom button"><a href="#features" class="scroll">Features</a></li>
 							<li class="hvr-bounce-to-bottom button"><a href="#contact" class="scroll">Contact</a></li>
@@ -107,40 +107,40 @@ $(document).ready(function () {
 			<div class="clearfix"></div>
 		</div>
 		<div class="banner-info">
-			<h2>Main�ö�ˢ��ϵͳ</h2>
+			<h2>Main悦动刷步系统</h2>
 			<div class="col-md-12 past">
-				<input type="text" class="tex" value="" id="idm" placeholder="���������ö�ȦID">
-				<input type="text" class="tex" value="" id="steps" placeholder="������Ҫˢ�Ĳ���">
+				<input type="text" class="tex" value="" id="idm" placeholder="输入您的悦动圈ID">
+				<input type="text" class="tex" value="" id="steps" placeholder="输入您要刷的步数">
 			</div>
 			<div class="clearfix"></div>
 			<ul id="myList">
 			
 			</ul>
 			<div class="find">
-				<a class="hvr-shutter-in-horizontal button" id="sesteps" onclick="query1()" >�ύ����</a>
+				<a class="hvr-shutter-in-horizontal button" id="sesteps" onclick="query1()" >提交步数</a>
 			</div>
 		</div>
 		
 	</div>
 </div>
-<div id="diy1" class="about" >��ӭʹ�ò���ϵͳ,��������״�ʹ��,�뿴�·��̳�</div>
+<div id="diy1" class="about" >欢迎使用步数系统,如果您是首次使用,请看下方教程</div>
 <!-- about -->
 <div class="services" id="about">
 	<div class="container">
-		<h3><span>ʹ��</span>˵��</h3>
+		<h3><span>使用</span>说明</h3>
 			
 			<div class="col-md-4 serv-left">
 				<span aria-hidden="true"></span>
-				<h4>׼��Statr</h4>
+				<h4>准备Statr</h4>
 				<img src="images/138945656741318503.png" class="img-responsive" alt=""/>
-				<p> ����APP���ö�Ȧ�ܲ��������ǡ��ö�Ȧ����ͼ������ɫ�ġ����Ǻ�ɫ��</p>
+				<p> 下载APP《悦动圈跑步》，不是“悦动圈”。图表是绿色的。不是红色的</p>
 			</div>
 			
 			<div class="col-md-4 serv-left">
 				<span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
 				<h4>STEP1</h4>
 				<img src="images/308718989304944351.jpg" class="img-responsive" alt=""/>
-				<p>��¼�ö�Ȧ������¼�޷��޸ģ���ֻ��ʹ��΢�ŵ�¼������ˢ����Ч��</p>
+				<p>登录悦动圈（不登录无法修改），只能使用微信登录！否则刷步无效！</p>
 			</div>
 			
 			
@@ -148,10 +148,10 @@ $(document).ready(function () {
 				<span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
 				<h4>STEP2</h4>
 				<img src="images/23534657523.png" class="img-responsive" alt=""/>
-				<p>�����ö�ȦAPP��������½ǵġ��ҡ��������ҵ���΢�����а񡱡������ҪˢQQ�������ͬ����QQ�������ġ���</p><br><br><br>
-				<p>*�����֮ǰ�Ѿ���ע���ö�Ȧ�Ĺ��ںŵĻ�����ͼ��ɫ��ť��ʾ���ǡ����빫�ںš������ǰ����ã���ô����Ҫ��
-1.��ȡ����ע�ö�Ȧ�Ĺ��ں�
-2.Ȼ����ö�ȦAPP�㡰΢�����а񡱽��й����ſ���</p>
+				<p>进入悦动圈APP，点击右下角的“我”，即可找到“微信排行榜”。如果需要刷QQ，点击“同步至QQ健康中心”！</p><br><br><br>
+				<p>*如果您之前已经关注过悦动圈的公众号的话，上图绿色按钮显示的是“进入公众号”而不是绑定设置，那么你需要：
+1.先取消关注悦动圈的公众号
+2.然后回悦动圈APP点“微信排行榜”进行关联才可以</p>
 			</div>
 			
 			
@@ -159,18 +159,18 @@ $(document).ready(function () {
 				<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
 				<h4>STEP3</h4>
 				<img src="images/20160506173220.png" class="img-responsive" alt=""/>
-				<br><br><p>������½ǵġ��ҡ�������������ҵ��ö��ʺţ�ͼ�к�򲿷֣���¼������</p><br><br>
-				<p>���뵽ˢ�����༭��</p>
+				<br><br><p>点击右下角的“我”，拉到最顶部，找到悦动帐号，图中红框部分，记录下来。</p><br><br>
+				<p>输入到刷步数编辑框</p>
 			</div>
 			
 			
-			<a class="hvr-shutter-in-horizontal button" href="http://mp.weixin.qq.com/s?__biz=MzA4NDU3NDQzNQ==&mid=504711586&idx=1&sn=966964e7b66bbee2c41f6ddc45c00e1e&scene=0#rd">���ʽ��</a>
+			<a class="hvr-shutter-in-horizontal button" href="http://mp.weixin.qq.com/s?__biz=MzA4NDU3NDQzNQ==&mid=504711586&idx=1&sn=966964e7b66bbee2c41f6ddc45c00e1e&scene=0#rd">疑问解答</a>
 			
 		<div class="abt-btm">
-			<p>�ش󾯸棺<br>
-ˢ�����ܲ����벻Ҫˢ����5w������
-ˢ�����ܲ����벻Ҫˢ����5w������
-ˢ�����ܲ����벻Ҫˢ����5w������</p>
+			<p>重大警告：<br>
+刷步！总步数请不要刷超过5w步！！
+刷步！总步数请不要刷超过5w步！！
+刷步！总步数请不要刷超过5w步！！</p>
 		</div>
 	</div>
 </div>
@@ -273,7 +273,7 @@ $(document).ready(function () {
 <!--- footer ---->	
 <div class="footer">
 	<div class="container">
-		<p>Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="#">����Ƽ�</a></p>
+		<p>Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="#">王络科技</a></p>
 		<div class="social">
 				<ul>
 					<li><a href="#" class="facebook"> </a></li>
