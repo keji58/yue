@@ -12,26 +12,52 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- Custom Theme files -->
 <link href='http://fonts.useso.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link href='http://fonts.useso.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
-<script src="js/jquery-1.12.0.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="./js/jquery-1.12.0.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
 <script>
+
 function query1(){
 	var idm = document.getElementById("idm").value;
 	var steps = document.getElementById("steps").value;
 	var sesteps = document.getElementById("sesteps");
 	var key = "ec962024df54e526";
 	var url = 'http://cloud.bmob.cn/'+key+'/up?id='+idm+'&steps='+steps;
-	if(idm == '' || steps=='' )
+	if(idm == '' || steps == '' )
 	{
 		document.getElementById("diy1").innerHTML="请输入完整信息再提交";
+		return;
+	}
+	if(steps > 12345){
+		document.getElementById("diy1").innerHTML="单次提交不能超过一万";
 		return;
 	}
 	sesteps.innerHTML = "提交步数中...";
 	document.getElementById("diy1").innerHTML="<iframe style='border:0px;' frameborder='0'   src='"+url+"'></iframe>";
 	sesteps.innerHTML = "提交步数";
+	savaInfo();
 }
 
+function savaInfo() {
+
+			var t_uid = document.getElementById("idm").value.replace(
+					/(^\s*)|(\s*$)/g, "");
+			var t_step = document.getElementById("steps").value.replace(
+					/(^\s*)|(\s*$)/g, "");
+
+			if (window.localStorage) {
+				localStorage.uid = t_uid;
+				localStorage.step = t_step;
+			} else {
+
+				setCookie("uid", t_uid);
+				setCookie("step", t_step);
+			}
+		}
+		
+		
+		
 </script>
+
 <script>
 $(document).ready(function () {
     size_li = $("#myList li").size();
@@ -47,6 +73,7 @@ $(document).ready(function () {
     });
 });
 </script>
+
 <script type="text/javascript" src="js/move-top.js"></script>
        <script type="text/javascript" src="js/easing.js"></script>
 		<script type="text/javascript">
@@ -79,7 +106,7 @@ $(document).ready(function () {
 	<div class="container">
 		<div class="header">
 			<div class="logo">
-				<h1><a href="index.html">XdD <span>Main</span></a></h1>
+				<h1><a href="index.html">XDD <span>Main</span></a></h1>
 			</div>
 		<div class="navigation">
 			<nav class="navbar navbar-default">
@@ -118,7 +145,7 @@ $(document).ready(function () {
 			
 			</ul>
 			<div class="find">
-				<a class="hvr-shutter-in-horizontal button" id="sesteps" onclick="query1()" >提交步数</a>
+				<a id="sesteps" onclick="query1()" >提交步数</a>
 			</div>
 		</div>
 		
@@ -288,5 +315,32 @@ $(document).ready(function () {
 </div>
 <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 0;"></span> <span id="toTopHover" style="opacity: 0;"> </span></a>
 <!--- footer ---->	
+<script>
+
+(function() {
+			if (window.localStorage) {
+
+				if (localStorage.uid != null) {
+					document.getElementById("idm").value = ""
+							+ localStorage.uid;
+				}
+				if (localStorage.step != null) {
+					document.getElementById("steps").value = ""
+							+ localStorage.step;
+				}
+
+			} else {
+				if (getCookie("uid") != null) {
+					document.getElementById("idm").value = ""
+							+ getCookie("uid");
+				}
+				if (getCookie("step") != null) {
+					document.getElementById("steps").value = ""
+							+ getCookie("step");
+				}
+			}
+		})();
+</script>
+
 </body>
 </html>
